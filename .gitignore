@@ -1,0 +1,11 @@
+/pre_trained/
+/tf_logs/
+/saved/
+/Logs/
+/logs/
+/baselines/OpenHGNN/openhgnn/dataset/
+/baselines/OpenHGNN/openhgnn/dataset/smin_mt9/
+/baselines/OpenHGNN/openhgnn/dataset/smin_mt9s/
+/baselines/ACMin/data/
+/baselines/HINE/dataset/
+/baselines/HINE/output/
