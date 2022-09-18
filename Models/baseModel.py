@@ -1,6 +1,5 @@
 import tensorflow as tf
 from GNN import SubLayer_E2N, SubLayer_N2E
-from Criterion import negative_sample
 from Utils import safe_lookup
 
 FLAGS = tf.flags.FLAGS
@@ -85,14 +84,6 @@ class BaseModel(object):
                 print("Type of features: ", self.feature_types)
                 print("Num of features: ", self.feature_vocab_size)
                 print("Num of classes: ", self.num_classes)
-
-            if FLAGS.coef_reconst > 0:
-                self.pos_num = features[0].shape[0]
-                self.neg_E4N_list = negative_sample(dims_keep_still=[0,],
-                                                      E4N_list=self.E4N,
-                                                      E_num=self.pos_num,
-                                                      # E_mask_feats=mask_feats[0],
-                                                      num_neg_sample=FLAGS.negnum)
 
 
     def init_embedding_layer(self):
